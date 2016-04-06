@@ -23,7 +23,7 @@ matrix:
    # - jdk: oraclejdk7
     #  env: test@&=beta
   exclude:
-    - compliler: gcc
+    - compiler: gcc
       
 build:
   #pre_ci:
