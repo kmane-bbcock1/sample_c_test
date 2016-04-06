@@ -1,7 +1,7 @@
 language: c
 
 compiler: 
-  - gcc
+  #- gcc
   - clang
 
 #jdk:
@@ -21,7 +21,7 @@ env:
 matrix:
   inlcude:
     - compiler: gcc
-      env: test@&=beta
+      env: test=beta
  # exclude:
   #  - jdk: oraclejdk7
       
@@ -40,6 +40,7 @@ build:
     #- ./hello
     - echo "$TEST"
     - echo "$CLAN"
+    - echo "$test"
    # - echo "$a1"
    # - echo "$a2"
 
