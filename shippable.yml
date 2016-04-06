@@ -2,7 +2,7 @@ language: c
 
 compiler: 
   - gcc
-  - clang
+  #- clang
 
 jdk:
    - openjdk6
@@ -14,14 +14,14 @@ env:
   global: 
     - TEST=CLan
     - CLAN=BETA
-  matrix:
-    - a1=test
-    - a2=beta
+ # matrix:
+  #  - a1=test
+   # - a2=beta
     
-matrix:
-  inlcude:
-    - jdk: oraclejdk7
-      env: test@&=beta
+#matrix:
+  #inlcude:
+   # - jdk: oraclejdk7
+    #  env: test@&=beta
       
 build:
   #pre_ci:
