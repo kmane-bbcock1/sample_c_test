@@ -4,11 +4,11 @@ compiler:
   - gcc
   - clang
 
-jdk:
-   - openjdk6
-   - openjdk7
-   - oraclejdk7
-   - oraclejdk8
+#jdk:
+ #  - openjdk6
+  # - openjdk7
+   #- oraclejdk7
+  # - oraclejdk8
    
 env:
   global: 
@@ -22,17 +22,17 @@ matrix:
   #inlcude:
    # - jdk: oraclejdk7
     #  env: test@&=beta
-  exclude:
-    - compiler: gcc
+ # exclude:
+  #  - jdk: oraclejdk7
       
 build:
-  #pre_ci:
-   # - echo 'true'
+  pre_ci:
+    - docker build -t=shippabledocker/shiphitchcock1_samplec .
 
   pre_ci_boot:
     image_name: drydock/u12cpp
     image_tag: prod
-    pull: true
+    pull: false
     options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
 
   ci:
@@ -40,8 +40,9 @@ build:
     #- ./hello
     - echo "$TEST"
     - echo "$CLAN"
-    - echo "$a1"
-    - echo "$a2"
+   # - echo "$a1"
+   # - echo "$a2"
 
-  #post_ci:
-    #- echo "true"
+  post_ci:
+    #- docker build -t=shippabledocker/shiphitchcock1_testsamplenode .
+    - docker push shippabledocker/shiphitchcock1_samplec
