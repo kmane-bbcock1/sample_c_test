@@ -1,5 +1,9 @@
 language: c
 
+env: 
+  - FOO=BAR
+  - BAR=BOO
+
 build:
   pre_ci:
     - echo 'true'
@@ -13,6 +17,8 @@ build:
   ci:
     - ./configure && make && make install
     - ./hello
+    - echo "$FOO"
+    - echo "$BAR"
 
   post_ci:
     - echo "true"
