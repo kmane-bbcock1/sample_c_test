@@ -18,10 +18,12 @@ env:
   #  - a1=test
    # - a2=beta
     
-#matrix:
+matrix:
   #inlcude:
    # - jdk: oraclejdk7
     #  env: test@&=beta
+  exclude:
+    - compliler: gcc
       
 build:
   #pre_ci:
