@@ -19,7 +19,7 @@ env:
     - a2=beta
     
 matrix:
-  inlcude:
+  include:
     - compiler: gcc
       env: test=beta
  # exclude:
