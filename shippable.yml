@@ -26,13 +26,13 @@ matrix:
   #  - jdk: oraclejdk7
       
 build:
-  pre_ci:
-    - docker build -t=shippabledocker/shiphitchcock1_samplec .
+  #pre_ci:
+   # - docker build -t=shippabledocker/shiphitchcock1_samplec .
 
   pre_ci_boot:
     image_name: drydock/u12cpp
     image_tag: prod
-    pull: false
+    pull: true
     options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
 
   ci:
@@ -43,6 +43,6 @@ build:
    # - echo "$a1"
    # - echo "$a2"
 
-  post_ci:
+  #post_ci:
     #- docker build -t=shippabledocker/shiphitchcock1_testsamplenode .
-    - docker push shippabledocker/shiphitchcock1_samplec
+    #- docker push shippabledocker/shiphitchcock1_samplec
