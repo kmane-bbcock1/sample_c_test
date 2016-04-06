@@ -10,10 +10,10 @@ compiler:
    #- oraclejdk7
   # - oraclejdk8
    
-env:
-  global: 
-    - TEST=CLan
-    - CLAN=BETA
+#env:
+ # global: 
+  #  - TEST=CLan
+   # - CLAN=BETA
  # matrix:
   #  - a1=test
    # - a2=beta
@@ -22,8 +22,8 @@ matrix:
   #inlcude:
    # - jdk: oraclejdk7
     #  env: test@&=beta
-  exclude:
-    - jdk: oraclejdk7
+ # exclude:
+  #  - jdk: oraclejdk7
       
 build:
   pre_ci:
