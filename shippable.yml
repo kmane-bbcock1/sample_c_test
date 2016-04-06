@@ -1,7 +1,7 @@
 language: c
 
 compiler: 
-  #- gcc
+  - gcc
   - clang
 
 #jdk:
@@ -22,8 +22,8 @@ matrix:
   include:
     - compiler: gcc
       env: test=beta
- # exclude:
-  #  - jdk: oraclejdk7
+  exclude:
+    - compiler: clang
       
 build:
   #pre_ci:
