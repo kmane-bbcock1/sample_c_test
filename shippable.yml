@@ -14,9 +14,9 @@ env:
   global: 
     - TEST=CLan
     - CLAN=BETA
-  matrix:
-    - a1=test
-    - a2=beta
+#  matrix:
+ #   - a1=test
+ #   - a2=beta
     
 matrix:
   include:
