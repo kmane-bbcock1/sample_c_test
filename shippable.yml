@@ -14,14 +14,14 @@ env:
   global: 
     - TEST=CLan
     - CLAN=BETA
- # matrix:
-  #  - a1=test
-   # - a2=beta
+  matrix:
+    - a1=test
+    - a2=beta
     
 matrix:
-  #inlcude:
-   # - jdk: oraclejdk7
-    #  env: test@&=beta
+  inlcude:
+    - compiler: gcc
+      env: test@&=beta
  # exclude:
   #  - jdk: oraclejdk7
       
