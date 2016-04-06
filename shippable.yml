@@ -1,18 +1,45 @@
 language: c
 
+compiler: 
+  - gcc
+  - clang
+
+jdk:
+   - openjdk6
+   - openjdk7
+   - oraclejdk7
+   - oraclejdk8
+   
+env:
+  global: 
+    - TEST=CLan
+    - CLAN=BETA
+  matrix:
+    - a1=test
+    - a2=beta
+    
+matrix:
+  inlcude:
+    - jdk: oraclejdk7
+      env: test@&=beta
+      
 build:
-  pre_ci:
-    - echo 'true'
+  #pre_ci:
+   # - echo 'true'
 
   pre_ci_boot:
-    image_name: drydock/u14cpp
+    image_name: drydock/u12cpp
     image_tag: prod
-    pull: false
+    pull: true
     options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
 
   ci:
-    - ./configure && make && make install
-    - ./hello
+   # - ./configure && make && make install
+    #- ./hello
+    - echo "$TEST"
+    - echo "$CLAN"
+    - echo "$a1"
+    - echo "$a2"
 
-  post_ci:
-    - echo "true"
+  #post_ci:
+    #- echo "true"
