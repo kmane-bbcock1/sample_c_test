@@ -46,3 +46,8 @@ build:
   post_ci:
     #- docker build -t=shippabledocker/shiphitchcock1_testsamplenode .
     - docker push shippabledocker/shiphitchcock1_samplec
+
+integrations:
+  hub:
+    - integrationName: ship-docker
+      type: docker
